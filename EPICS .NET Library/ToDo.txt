@@ -1,0 +1,38 @@
+﻿* private void PutASync(object value, EpicsPutDelegate callBack): This function allows same put operation to be reperated many
+times over (like same channel to be put to same value repeatedly). Actual implementation should assign a GUID (channelname+value)
+to each put operation and reject similar put requests or should queue them according to user settings (app.config), or via two
+overloaded methods (PutASync: rejecting PutASyncQueue: queuing but eliminating similar requests like in my diploma thesis).
+
+* MonitorChanged event posts updates on the worker thread which results in race conditions, or UI binding problems. Use below
+as default and provide overloaded event for older behaviour:
+		"Channel Access\BeamGuidance.cs"
+		private AsyncOperation asyncOperation = AsyncOperationManager.CreateOperation(null);
+
+		private void BPMCurrent_MonitorChanged(EpicsChannel<double> sender, double newValue)
+		{
+			this.asyncOperation.Post(state => this.BPMCurrent = newValue, null);
+			this.asyncOperation.OperationCompleted();
+		}
+
+* Epics uses client/server architecture with publish/subscribe paradigm so all the names like record, channel etc. etc. are
+highly confusing. A single class called ClientServer.cs should handle all client and server creations. All I/O variables should
+either be Publish.cs for servers (automaticly created by the ClientServer.cs's factor method) and Subscribe.cs for clients.
+** Actually the ClientServer.cs should reveal a POCO class abstracting out all the databinding compilcations like two-way
+binding and setter issues. Changes made by either way should be handled accordingly and internally. What is exposed to the
+user should be data-bindable simple POCO class. All constructors should be strongly types and no magic strings for channels
+names should be used. Channel names should match the bindable property names somehow.
+*** Better of emulating the behavior of WCF 4.0!
+
+* Library should not send MonitorChanged event notifications (rename these notifications by the way) if the last value and the
+new value is the same or differ by something less than the Filter value (filtering is vital not to post unimportant changes
+which could normally clog the network).
+
+* Server sends the data seperately to all the listening clients but it should better use IP Multicast to save on bandwidth:
+http://stackoverflow.com/questions/2292063/how-do-i-determeine-the-source-ip-of-a-multicast-packet-in-c
+
+* Channels should either be plane old channels like in ChannelAccess.EPICS or self-tracking entities like in PSI EPICS implementation.
+So creating a single channel factory producint two distinct types of channels would be appropriate.
+
+* EPICS v2 should support 'bool' data type. Actually it should simply be all generic and support any T as long as it can be converted to
+byte (i.e. serialized to byte in a desired serialization container, binary-xml-proto_buf-etc.). While doint this, it should be fully
+backwards compatible (i.e. convering 'Image' to 'byte array', or 'bool' to 'int').

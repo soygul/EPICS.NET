@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{984AC252-7DD1-4BBB-A2B0-DB9F921B91B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Epics.UserControls.Graphics</RootNamespace>
+    <AssemblyName>UserControls.Graphics</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\UserControls.Graphics.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\Signing.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Virtual Accelerator\Properties\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="BeamlineGraphics\Aperture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamlineGraphics\Aperture.Designer.cs">
+      <DependentUpon>Aperture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeamlineGraphics\Buncher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamlineGraphics\Buncher.Designer.cs">
+      <DependentUpon>Buncher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeamlineGraphics\BuncherSmall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamlineGraphics\BuncherSmall.Designer.cs">
+      <DependentUpon>BuncherSmall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeamlineGraphics\CurrentTransformer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamlineGraphics\CurrentTransformer.Designer.cs">
+      <DependentUpon>CurrentTransformer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeamlineGraphics\DriftTube.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamlineGraphics\DriftTube.Designer.cs">
+      <DependentUpon>DriftTube.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeamlineGraphics\ElectronGun.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamlineGraphics\ElectronGun.Designer.cs">
+      <DependentUpon>ElectronGun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeamlineGraphics\GateValve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamlineGraphics\GateValve.Designer.cs">
+      <DependentUpon>GateValve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeamlineGraphics\Laser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamlineGraphics\Laser.Designer.cs">
+      <DependentUpon>Laser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BeamlineGraphics\Solenoid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamlineGraphics\Solenoid.Designer.cs">
+      <DependentUpon>Solenoid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeamlineGraphics\SteeringMagnet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamlineGraphics\SteeringMagnet.Designer.cs">
+      <DependentUpon>SteeringMagnet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeamlineGraphics\Vacuum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamlineGraphics\Vacuum.Designer.cs">
+      <DependentUpon>Vacuum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeamlineGraphics\VacuumSlim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamlineGraphics\VacuumSlim.Designer.cs">
+      <DependentUpon>VacuumSlim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeamlineGraphics\ViewScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamlineGraphics\ViewScreen.Designer.cs">
+      <DependentUpon>ViewScreen.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BeamlineGraphics\Aperture.resx">
+      <DependentUpon>Aperture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeamlineGraphics\Buncher.resx">
+      <DependentUpon>Buncher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeamlineGraphics\BuncherSmall.resx">
+      <DependentUpon>BuncherSmall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeamlineGraphics\CurrentTransformer.resx">
+      <DependentUpon>CurrentTransformer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeamlineGraphics\DriftTube.resx">
+      <DependentUpon>DriftTube.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeamlineGraphics\ElectronGun.resx">
+      <DependentUpon>ElectronGun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeamlineGraphics\GateValve.resx">
+      <DependentUpon>GateValve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeamlineGraphics\Laser.resx">
+      <DependentUpon>Laser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeamlineGraphics\Solenoid.resx">
+      <DependentUpon>Solenoid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeamlineGraphics\SteeringMagnet.resx">
+      <DependentUpon>SteeringMagnet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeamlineGraphics\Vacuum.resx">
+      <DependentUpon>Vacuum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeamlineGraphics\VacuumSlim.resx">
+      <DependentUpon>VacuumSlim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeamlineGraphics\ViewScreen.resx">
+      <DependentUpon>ViewScreen.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Controls\aperture.png" />
+    <Content Include="Resources\Controls\buncher.png" />
+    <Content Include="Resources\Controls\buncher_small.png" />
+    <Content Include="Resources\Controls\camera.png" />
+    <Content Include="Resources\Controls\current_transformer.png" />
+    <Content Include="Resources\Controls\drift_tube.png" />
+    <Content Include="Resources\Controls\e-gun.png" />
+    <Content Include="Resources\Controls\laser.png" />
+    <Content Include="Resources\Controls\solenoid.png" />
+    <Content Include="Resources\Controls\steering_magnet.png" />
+    <Content Include="Resources\Controls\tee.png" />
+    <Content Include="Resources\Controls\tee_reverse.png" />
+    <Content Include="Resources\Controls\vacuum.png" />
+    <Content Include="Resources\Controls\vacuum_slim.png" />
+    <Content Include="Resources\Controls\valve.png" />
+    <Content Include="Resources\Controls\view_screen.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

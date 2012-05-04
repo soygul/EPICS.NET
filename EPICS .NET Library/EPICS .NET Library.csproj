@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3DBF1151-9420-4063-A790-8E4A0BBC6977}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Epics</RootNamespace>
+    <AssemblyName>EPICS.NET.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <DocumentationFile>
+    </DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\EPICS.NET.Library.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\Signing.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Beaconizer.cs" />
+    <Compile Include="Base\IRuleSet.cs" />
+    <Compile Include="Base\ConfigList.cs" />
+    <Compile Include="Base\Constants\AccessRights.cs" />
+    <Compile Include="Base\Constants\CAConstants.cs" />
+    <Compile Include="Base\Constants\ChannelStatus.cs" />
+    <Compile Include="Base\Constants\CommandID.cs" />
+    <Compile Include="Base\Constants\EpicsTransitionStatus.cs" />
+    <Compile Include="Base\Constants\MonitorMask.cs" />
+    <Compile Include="Base\Constants\Severity.cs" />
+    <Compile Include="Base\Constants\Status.cs" />
+    <Compile Include="Base\EpicsArray.cs" />
+    <Compile Include="Base\EpicsCodec.cs" />
+    <Compile Include="Base\EpicsUDPConnection.cs" />
+    <Compile Include="Base\ETypes\extEnumType.cs" />
+    <Compile Include="Base\GateWayTraceListener.cs" />
+    <Compile Include="Base\Pipe.cs" />
+    <Compile Include="Base\SubnetMask.cs" />
+    <Compile Include="Base\UDPSocketManager.cs" />
+    <Compile Include="Client\EpicsChannel.cs" />
+    <Compile Include="Client\EpicsClient.cs" />
+    <Compile Include="Client\EpicsClientConfig.cs" />
+    <Compile Include="Client\EpicsClientCodec.cs" />
+    <Compile Include="Base\EpicsExceptionList.cs" />
+    <Compile Include="Client\EpicsGenericChannel.cs" />
+    <Compile Include="Client\EpicsClientTCPConnection.cs" />
+    <Compile Include="Base\Constants\EpicsType.cs" />
+    <Compile Include="Base\EpicsTCPConnection.cs" />
+    <Compile Include="Base\ETypes\extAcknowledge.cs" />
+    <Compile Include="Base\ETypes\extControl.cs" />
+    <Compile Include="Base\ETypes\extGraphic.cs" />
+    <Compile Include="Base\ETypes\extTimeType.cs" />
+    <Compile Include="Base\ETypes\extType.cs" />
+    <Compile Include="Client\EpicsClientUDPConnection.cs" />
+    <Compile Include="Base\NetworkByteConverter.cs" />
+    <Compile Include="GateWay\EpicsGateWay.cs" />
+    <Compile Include="GateWay\EpicsGateWayDefaultAccess.cs" />
+    <Compile Include="GateWay\EpicsGateWayIocChannel.cs" />
+    <Compile Include="GateWay\EpicsGateWayClientChannel.cs" />
+    <Compile Include="GateWay\EpicsGateWayConfig.cs" />
+    <Compile Include="GateWay\EpicsGateWayConnectorCodec.cs" />
+    <Compile Include="GateWay\EpicsGateWayMonitor.cs" />
+    <Compile Include="GateWay\EpicsGateWayReceiverCodec.cs" />
+    <Compile Include="GateWay\EpicsGateWayStatistics.cs" />
+    <Compile Include="GateWay\EpicsTCPGWConnection.cs" />
+    <Compile Include="GateWay\EpicsUDPGWConnection.cs" />
+    <Compile Include="GateWay\JobHandle.cs" />
+    <Compile Include="GateWay\MonitorHandle.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\EpicsArrayRecord.cs" />
+    <Compile Include="Server\EpicsServerCodec.cs" />
+    <Compile Include="Server\EpicsServerConfig.cs" />
+    <Compile Include="Server\EpicsRecord.cs" />
+    <Compile Include="Server\EpicsGenericRecord.cs" />
+    <Compile Include="Server\EpicsServer.cs" />
+    <Compile Include="Server\EpicsServerChannel.cs" />
+    <Compile Include="Server\EpicsServerMonitor.cs" />
+    <Compile Include="Server\EpicsServerTCPConnection.cs" />
+    <Compile Include="Server\EpicsServerUDPConnection.cs" />
+    <Compile Include="Server\IValue.cs" />
+    <Compile Include="Server\RecordProperty.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ToDo.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName)==Debug copy "$(TargetPath)" "$(SolutionDir)Virtual Accelerator\bin\Debug" /Y
+if $(ConfigurationName)==Debug copy "$(TargetDir)$(TargetName).pdb" "$(SolutionDir)Virtual Accelerator\bin\Debug" /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>
