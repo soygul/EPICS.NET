@@ -1,4 +1,13 @@
-EPICS.NET
-=========
+# EPICS.NET
+EPICS .NET is the Experimental Physics and Industrial Control System for .NET Framework 4.0 and above. Written in C#, this control toolkit consists of three sub projects:
+* EPICS .NET Library,
+* Virtual Accelerator: Demonstrates full capabilities of the library,
+* EPICS Simulator
 
-Experimental Physics and  Industrial Control System for .NET. Argonne National Laboratory&#39;s EPICS implementation&#39;s .NET port, complete with tooling package.
+Three of the main components together make up a full control system environment where all the signal algorithms can be tested on the simulator before deployment to the controllers. It is also used as the sole control system for: Turkish Accelerator Center - IR-FEL Project
+
+## Quickstart
+Read the quickstart here: http://www.soygul.com/projects/epics/
+
+## CodePlex Home
+Orijinal project source is hosted at CodePlex, where you can find more information about the project: http://epics.codeplex.com/
