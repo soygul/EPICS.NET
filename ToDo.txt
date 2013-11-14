@@ -1,4 +1,0 @@
-Implement all the simulator components for ProcessVisualization\Injector (expecially gate valves etc.) +  Faraday cup, current transformer
-Ipmrpve percentage filtering for un-important channels (or better use CPU utilization detection and auto filtering)
-Seperate the Simulator & Controller as a preparation for moving to IPCs in the near future
-Rework the documentation (developer's manual & user's manual)
