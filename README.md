@@ -1,4 +1,4 @@
-# [![EPICS.NET](http://www.soygul.com/wp-content/uploads/2011/02/epics_net_logo.png)](http://www.soygul.com/projects/epics/)
+# [![EPICS.NET](http://soygul.com/epics/logo.png)](http://www.soygul.com/epics/)
 EPICS .NET is the Experimental Physics and Industrial Control System for .NET Framework 4.0 and above. Written in C#, this control toolkit consists of three sub projects:
 * EPICS .NET Library,
 * Virtual Accelerator: Demonstrates full capabilities of the library,
