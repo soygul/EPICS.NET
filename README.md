@@ -12,6 +12,10 @@ Read the quickstart here: http://www.soygul.com/epics/
 ## CodePlex Home
 Orijinal project source is hosted at CodePlex, where you can find more information about the project: http://epics.codeplex.com/
 
+## Demo Screenshot
+
+![Home Page](http://soygul.com/epics/hmi.png)
+
 ## License
 
 This project extends PSI EPICS C# protocol implementation. Licensed under GPLv3 license.
