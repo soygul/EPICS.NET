@@ -9,6 +9,9 @@ Three of the main components together make up a full control system environment 
 ## Quickstart
 Read the quickstart here: http://www.soygul.com/epics/
 
+## CodePlex Archive
+Old project source is hosted at CodePlex, where you can find prebuilt binaries for download: http://epics.codeplex.com/
+
 ## Demo Screenshot
 
 ![Home Page](http://soygul.com/epics/hmi.png)
